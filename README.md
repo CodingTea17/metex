@@ -20,4 +20,4 @@ and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/metex](https://hexdocs.pm/metex).
 
 ## API Key
-Go to https://openweathermap.org/appid to get an api key. Store it in a system environment variable called " WEATHER_API_KEY" and you'll be good to go!
+Go to https://openweathermap.org/appid to get an api key. Store it in a system environment variable called " WEATHER_API_KEY" and you'll be good to go!8

@@ -1,6 +1,17 @@
 defmodule Metex.Worker do
 
-  def temperature_of(location) do
+  def loop_de_loop do
+    receive do
+      {sender_pid, location} ->
+        send(sender_pid, {:ok, temperature_of(location)})
+
+      _ ->
+        IO.puts("Return to carrier...")
+      loop_de_loop()
+    end
+  end
+
+  defp temperature_of(location) do
     result = url_for(location) |> HTTPoison.get |> parse_response
     case result do
       {:ok, temp} ->
